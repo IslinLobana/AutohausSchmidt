@@ -3,7 +3,7 @@ public class Verkauf {
     Kunde _kunde;
     int _preis;
     Verkaeufer _verkaeufer;
-
+    // TODO: Hier was einfügen
     public Auto getAuto() {
         return _auto;
     }

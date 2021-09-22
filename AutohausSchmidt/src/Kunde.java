@@ -12,15 +12,24 @@ public class Kunde {
         this.setAdresse(adresse);
         this.setTelefon(telefon);
     }
+
+    public Kunde(String vorname, String nachname){
+        this.setVorname(vorname);
+        this.setNachname(nachname);
+    }
+    
     public String getVorname(){
         return _vorname;
     }
+
     public String getNachname() {
         return _nachname;
     }
+
     public String getAdresse() {
         return _adresse;
     }
+
     public String getTelefon() {
         return _telefon;
     }
@@ -28,14 +37,21 @@ public class Kunde {
     public void setVorname(String vorname){
         _vorname = vorname;
     }
+
     public void setNachname(String nachname) {
         _nachname = nachname;
     }
+
     public void setAdresse(String adresse) {
         _adresse = adresse;
     }
+
     public void setTelefon(String telefon) {
         _telefon = telefon;
+    }
+
+    public void tuewas(){
+
     }
 }
 
