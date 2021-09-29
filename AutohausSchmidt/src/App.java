@@ -22,23 +22,61 @@ public class App {
             Menu menu = new Menu();
             menu.startMenu();
         }
-    
+        // Hier wird beschrieben, dass immer der nächste freie Platz belegt werden soll, also immer null
         public static void addAuto(Auto auto){
-            _autos[0] = auto;
-        }
+            //i wird anfangs als 0 definiert
+            int i = 0;
+            //Auto wird als a definiert
+            for(Auto a : getAllAutos()) {
+                //wenn a(Auto) null ist dann 
+                if(a == null){
+                    //ich greife auf das i´te Element des Arrays autos zu und 
+                    //frage die Infos des neu erstellten Autos zu
+                    _autos[i] = auto;
+                    // Stoppt die nächst gelegene Schleife bzw. die for each schleife bzw. das das Array abgefragt wird
+                    break;
+                }
+                // i wird um 1 erhöht
+                i = i + 1;
+                
+                if(i > 7){
+                    System.out.println("Kein Platz mehr, alle Platz vergeben");
+                }
+            }
+        }    
         public static Auto[] getAllAutos(){
             return _autos;
         }
 
         public static void addKunde(Kunde kunde){
-            _kunden[0] = kunde;
+            int i = 0;
+            for(Kunde k : getAllKunden()){
+                if(k == null){
+                   _kunden[i] = kunde;
+                   break;
+                }
+                i = i + 1;
+                if(i > 7){
+                    System.out.println("Kein Platz mehr, alle Platz vergeben");
+                }
+            }
         }
         public static Kunde[] getAllKunden(){
             return _kunden;
         }
 
         public static void addVerkaeufer(Verkaeufer verkaeufer){
-            _verkaeufer[0] = verkaeufer;
+            int i = 0;
+            for(Verkaeufer vk : getAllVerkaeufer()){
+                if(vk == null){
+                   _verkaeufer[i] = verkaeufer;
+                   break;
+                }
+                i = i + 1;
+                if(i > 7){
+                    System.out.println("Kein Platz mehr, alle Platz vergeben");
+                }
+            }
         }
         public static Verkaeufer[] getAllVerkaeufer(){
             return _verkaeufer;
